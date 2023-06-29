@@ -1,6 +1,12 @@
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import badi from "../src/assets/badi.jpg"
+import bki from "../src/assets/bki.png"
+import collage from "../src/assets/collage.jpg"
+import sakto from "../src/assets/sakto.jpg"
+import sethpng from "../src/assets/sethpng.png"
+import ve from "../src/assets/ve.jpg"
 
 export const App = () => {
   const parallax = useRef<IParallax>(null!);
@@ -28,7 +34,7 @@ export const App = () => {
           speed={0}
           factor={4}
           style={{
-            backgroundImage: "url(/public/sethpng.png)",
+            backgroundImage: `url(${sethpng})`,
             backgroundSize: "75% auto",
             backgroundRepeat: "repeat",
           }}
@@ -56,7 +62,7 @@ export const App = () => {
             }}
           >
             <img
-              src="/public/collage.jpg"
+              src={collage}
               style={{ width: "44%", filter: "brightness(.3)",cursor:"pointer", }}
             />
             <motion.span
@@ -106,7 +112,7 @@ export const App = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.9, ease: "easeIn" }}
-              src="/public/bki.png"
+              src={bki}
               style={{ width: "9%", marginLeft: "78%" }}
             />
             <motion.h1
@@ -135,7 +141,7 @@ export const App = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.9, ease: "easeIn" }}
-              src="/public/bki.png"
+              src={bki}
               style={{ width: "9%", marginLeft: "20%",cursor:"pointer" }}
             />
             <motion.h1
@@ -164,7 +170,7 @@ export const App = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.9, ease: "easeIn" }}
-              src="/public/bki.png"
+              src={bki}
               style={{ width: "9%", marginLeft: "70%" }}
             />
             <motion.h1
@@ -193,7 +199,7 @@ export const App = () => {
             justifyContent: "center",
           }}
         >
-          <img src="/public/sakto.jpg" style={{ width: "40%",cursor:"pointer", }} />
+          <img src={sakto} style={{ width: "40%",cursor:"pointer", }} />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -206,7 +212,7 @@ export const App = () => {
           }}
           onClick={() => parallax.current.scrollTo(3)}
         >
-          <img src="/public/badi.jpg" style={{ width: "27%",cursor:"pointer", }} />
+          <img src={badi} style={{ width: "27%",cursor:"pointer", }} />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -219,7 +225,7 @@ export const App = () => {
           }}
           onClick={() => parallax.current.scrollTo(0)}
         >
-          <img src="/public/ve.jpg" style={{ width: "30%", height: "70%", cursor:"pointer",}} />
+          <img src={ve} style={{ width: "30%", height: "70%", cursor:"pointer",}} />
         </ParallaxLayer>
       </Parallax>
     </div>
