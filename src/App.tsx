@@ -1,5 +1,5 @@
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 
 export const App = () => {
