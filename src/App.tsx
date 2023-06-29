@@ -1,12 +1,12 @@
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import badi from "../src/assets/badi.jpg"
-import bki from "../src/assets/bki.png"
-import collage from "../src/assets/collage.jpg"
-import sakto from "../src/assets/sakto.jpg"
-import sethpng from "../src/assets/sethpng.png"
-import ve from "../src/assets/ve.jpg"
+import badi from "../src/assets/badi.jpg";
+import bki from "../src/assets/bki.png";
+import collage from "../src/assets/collage.jpg";
+import sakto from "../src/assets/sakto.jpg";
+import sethpng from "../src/assets/sethpng.png";
+import ve from "../src/assets/ve.jpg";
 
 export const App = () => {
   const parallax = useRef<IParallax>(null!);
@@ -59,11 +59,17 @@ export const App = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              flexDirection: "column",
             }}
           >
             <img
               src={collage}
-              style={{ width: "44%", filter: "brightness(.3)",cursor:"pointer", }}
+              style={{
+                width: "44%",
+                filter: "brightness(.3)",
+                cursor: "pointer",
+                minWidth: "290px",
+              }}
             />
             <motion.span
               initial={{ x: "-70%", y: "-50%" }}
@@ -78,6 +84,7 @@ export const App = () => {
                 fontSize: "4.7vw",
                 fontWeight: "bold",
                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+                whiteSpace: "nowrap",
               }}
             >
               βετα Καρρα ιστα
@@ -95,6 +102,7 @@ export const App = () => {
                 fontSize: "3vw",
                 fontWeight: "bold",
                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+                whiteSpace: "nowrap",
               }}
             >
               LOWER PAKIGNE
@@ -122,7 +130,9 @@ export const App = () => {
               style={{
                 color: "#ffffff",
                 width: "50% auto",
+                minWidth:"100px",
                 marginLeft: "73%",
+                whiteSpace: "nowrap",
                 zIndex: 100,
               }}
             >
@@ -142,7 +152,7 @@ export const App = () => {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.9, ease: "easeIn" }}
               src={bki}
-              style={{ width: "9%", marginLeft: "20%",cursor:"pointer" }}
+              style={{ width: "9%", marginLeft: "20%", cursor: "pointer" }}
             />
             <motion.h1
               initial={{ x: "30%" }}
@@ -152,6 +162,7 @@ export const App = () => {
                 color: "#ffffff",
                 width: "100% auto",
                 marginLeft: "18%",
+                whiteSpace: "nowrap",
                 zIndex: 100,
               }}
             >
@@ -181,6 +192,7 @@ export const App = () => {
                 color: "#ffffff",
                 width: "100% auto",
                 marginLeft: "69%",
+                whiteSpace: "nowrap",
                 zIndex: 100,
               }}
             >
@@ -197,9 +209,11 @@ export const App = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            flexDirection: "column",
           }}
         >
-          <img src={sakto} style={{ width: "40%",cursor:"pointer", }} />
+          <img src={sakto} style={{ width: "40%", cursor: "pointer",
+        minWidth: "190px", }} />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -212,7 +226,7 @@ export const App = () => {
           }}
           onClick={() => parallax.current.scrollTo(3)}
         >
-          <img src={badi} style={{ width: "27%",cursor:"pointer", }} />
+          <img src={badi} style={{ width: "27%", cursor: "pointer",minWidth: "160px", }} />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -225,7 +239,10 @@ export const App = () => {
           }}
           onClick={() => parallax.current.scrollTo(0)}
         >
-          <img src={ve} style={{ width: "30%", height: "70%", cursor:"pointer",}} />
+          <img
+            src={ve}
+            style={{ width: "30%", height: "70%", cursor: "pointer",minWidth: "140px", }}
+          />
         </ParallaxLayer>
       </Parallax>
     </div>
