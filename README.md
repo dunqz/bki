@@ -1,4 +1,4 @@
-# Parallax-scroll
+# Eyy Yow
 
 npm install or yarn add
 
